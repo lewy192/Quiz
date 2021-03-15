@@ -1,0 +1,98 @@
+* , *::after, *::before {
+    box-sizing: border-box;
+    font-family: 'Joystix', 'Arial Narrow', Arial, sans-serif;
+    /* add font family of joystix */
+
+}
+
+@font-face{
+    font-family: "Joystix";
+    src:url(/assets/fonts/Joystix.TTF);
+}
+:root{
+    --yellow: #FFFF00;
+    --neonBlue: #1919A6;
+    --blueBonnet:#2121DE;
+    --tumbleWeed:#DEA185;
+    --red:#fd0000;
+    --electricGreen:#00FF00;
+    --black:#000000;
+}
+
+body{
+    margin:0;
+    padding: 0%;
+    background-color: var(--black);
+    color:white;
+    display:flex;
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+.header-text{
+    color:var(--yellow)
+}
+
+.timer-score{
+    margin:.625rem;
+    display: flex;
+}
+
+.counter{
+    border: 3px solid var(--blueBonnet);
+    border-radius:3px;
+    padding:.625rem;
+    
+}
+.timer{
+    margin:0 auto 0 0
+}
+
+.container{
+    border: 5px solid var(--blueBonnet);
+    border-radius:10px;
+    padding:15px
+}
+.button-container{
+
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    margin: 10px 0;
+}
+.button-container .button{
+    flex: 1 1 auto;
+    margin: 0.625em;
+    padding: 0.625em;
+}
+.button{
+    border: 2px solid var(--blueBonnet);
+    border-radius: 5px;
+    padding: 0.25em;
+    background-color: var(--black);
+    color: white;
+    
+}
+
+.controls{
+    display: flex;
+    justify-content: space-evenly;
+    margin:0 auto;
+}
+.leader-container{
+    border: 2px solid var(--blueBonnet);
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin:10px
+
+}
