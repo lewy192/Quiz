@@ -37,7 +37,8 @@ a{
 }
 
 .header-text{
-    color:var(--yellow)
+    color:var(--yellow);
+    font-size: 2em;
 }
 
 .timer-score{
@@ -51,6 +52,7 @@ a{
     padding:.625rem;
     
 }
+
 .timer{
     margin:0 auto 0 0
 }
@@ -76,11 +78,17 @@ a{
 .button{
     border: 2px solid var(--blueBonnet);
     border-radius: 5px;
-    padding: 0.25em;
+    /* padding: 0.25em; */
     background-color: var(--black);
     color: white;
     
+    
 }
+.answer-button{
+    font-family: 'Courier New', Courier, monospace;
+    display: none;
+    font-weight: 700;
+}  
 
 .controls{
     display: flex;
@@ -88,6 +96,7 @@ a{
     margin:0 auto;
 }
 .leader-container{
+    color:var(--tumbleWeed);
     border: 2px solid var(--blueBonnet);
     border-radius: 5px;
     display: flex;
@@ -95,4 +104,28 @@ a{
     align-items: center;
     margin:10px
 
+}
+
+.leaderboard-form{
+    display: inline-block;
+    color:white;
+    background-color: black;
+    border: 2px solid var(--blueBonnet);
+    border-radius: 3px;
+    /* height:50px; */
+}
+
+/* sets different colors for places 1,2 and 3 on the leaderboard */
+/* overrides the color of container as they're set after it, using the cascading effect of css */
+
+.leader-spot0{
+    color:#FFD700;
+}
+
+.leader-spot1{
+    color:#C5CED4;
+}
+
+.leader-spot2{
+    color:#CD7F32;
 }

@@ -4,8 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/reset.css">
     <link rel = "stylesheet" href = "assets/css/style.css">
-    <script rel = "script" src = "assets/scripts/script.js" defer ></script>
+    <script rel = "script" src = "assets/scripts/sciptnew.js" defer ></script>
     <title>LETS PLAY</title>
 </head>
 <body>
@@ -15,28 +16,26 @@
         <section class="timer-score container">
             
             <div class="timer counter">
-                5
-            </div>
-            <p></p>
+                <h4>Time: <span id="time">0</span></h4>
+            </div>  
             <div class="score counter">
-                5
+                <h4>Score: <span id="score">0</span></h4>
             </div>
         </section>
-        <div class="question" id = "question"> 
-            Question will go here
+        <div class="question" id = "question">
         </div>
 
         <section class="button-container">
-            <button class="button" id = "button1">
+            <button class="answer-button button" id = "button0" data-correct>
                 Button1
             </button>
-            <button class="button" id = "button2">
+            <button class="answer-button button" id = "button1" data-correct>
                 Button2
             </button>
-            <button class="button" id = "button3">
+            <button class="answer-button button" id = "button2" data-correct>
                 Button3
             </button>
-            <button class="button" id = "button4">
+            <button class="answer-button button" id = "button3" data-correct>
                 Button4
             </button>
         </section>
@@ -46,9 +45,7 @@
                 <a href = '/index.html'>Home</a>
             </button>
 
-            <button class="forward-button button">
-                Next Q
-            </button>
+            <button class="forward-button button" id = 'next-button'>Start</button>
 
         </section>
     </main>
