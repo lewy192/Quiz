@@ -193,7 +193,7 @@ function submitToLeaderboard(){
     nextButton.disabled = true;
     // nextButton.removeEventListener(quizStartUp)
     var leaderAnchor  = document.createElement('a');
-    leaderAnchor.href = '/leaderboard.html';
+    leaderAnchor.href = '/assets/pages/leaderboard.html';
     leaderAnchor.innerHTML = 'To Leaderboard';
     nextButton.appendChild(leaderAnchor);
     }
