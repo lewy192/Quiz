@@ -83,7 +83,7 @@ function timer(){
     },1000);
 };
 
-function questionButtons (questionSet){ 
+function questionButtons(questionSet){ 
     var selectedAnswers = questionSet[questionNumber].answers;
     // console.log(selectedAnswers)
     for (var i = 0; i < selectedAnswers.length;i++){
@@ -106,7 +106,6 @@ function checkAnswer(noOfQuestions,questionSet){
         if (e.target.matches('.button')){
             // debugger
             if(e.target.dataset.correct === 'true' && (counterValue > 0 && questionNumber < noOfQuestions)){
-                // console.log('true and not last')
                 e.target.style.color = '#00FF00';
                 // answerButton.forEach(item => item.disabled = true);
                 updateScore(counterValue);
@@ -189,15 +188,61 @@ function submitToLeaderboard(){
     localStorage.setItem('usersLeaderBoard',JSON.stringify(usersArray));
     formElement.value ='';
     formElement.style.display ='none';
-    nextButton.innerHTML = '';
-    nextButton.disabled = true;
-    // nextButton.removeEventListener(quizStartUp)
-    var leaderAnchor  = document.createElement('a');
-    leaderAnchor.href = '/assets/pages/leaderboard.html';
-    leaderAnchor.innerHTML = 'To Leaderboard';
-    nextButton.appendChild(leaderAnchor);
-    }
-}
+    nextButton.style.display = 'none';
+    organiseLeaderboardScores();
+    };
+};
+function compareScore(a, b){
+    var score1 = a.score;
+    var score2 = b.score;
+
+    var comparison = 0;
+    if (score1 < score2){
+        comparison = 1;
+    
+    }else if (score1 > score2){
+        comparison =-1
+    };
+    return comparison;
+};
+
+
+function createLeaderBoard(numberOfSpots,listOfScores){
+    var buttonContainer = document.querySelector('.button-container');
+    buttonContainer.classList.add('leader-container');
+    for(var i =0;i<numberOfSpots;i++){
+        var leaderSpot = document.createElement('p');
+        leaderSpot.classList.add(`leader-spot${i}`);
+        leaderSpot.textContent = `${i+1}. ${listOfScores[i].name} at ${listOfScores[i].score} Points.`;
+        buttonContainer.appendChild(leaderSpot);
+    };
+};
+
+
+
+
+
+function organiseLeaderboardScores(){
+    var leaderScores = JSON.parse(localStorage.getItem('usersLeaderBoard'))
+    leaderScores.sort(compareScore)
+    if(leaderScores.length > 5){
+        createLeaderBoard(5,leaderScores);
+    }else if(leaderScores.length > 0 && leaderScores.length < 5){
+        createLeaderBoard(leaderScores.length, leaderScores)
+    }else{
+        var leaderContainter = document.querySelector('.buttonContainer')
+        var emptyLeaderBoardMessage = document.createElement('p')
+        emptyLeaderBoardMessage.textContent = 'There are no leader scores at this point play and submit one!'
+        leaderContainter.appendChild(emptyLeaderBoardMessage)
+    }; 
+};
+
+
+
+
+
+
+
 
 
 
