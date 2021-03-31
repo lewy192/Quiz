@@ -6,10 +6,10 @@
     /* add font family of joystix */
 }
 
-/* @font-face {
+@font-face {
     font-family: "Joystix";
     src: url(./assets/fonts/Joystix.TTF);
-} */
+}
 :root {
     --yellow: #ffff00;
     --neonBlue: #1919a6;
