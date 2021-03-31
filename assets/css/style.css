@@ -1,114 +1,110 @@
-* , *::after, *::before {
+*,
+*::after,
+*::before {
     box-sizing: border-box;
-    font-family: 'Joystix', 'Arial Narrow', Arial, sans-serif;
+    font-family: "Joystix", "Arial Narrow", Arial, sans-serif;
     /* add font family of joystix */
-
 }
 
-@font-face{
+/* @font-face {
     font-family: "Joystix";
-    src:url(/assets/fonts/Joystix.TTF);
-}
-:root{
-    --yellow: #FFFF00;
-    --neonBlue: #1919A6;
-    --blueBonnet:#2121DE;
-    --tumbleWeed:#DEA185;
-    --red:#fd0000;
-    --electricGreen:#00FF00;
-    --black:#000000;
+    src: url(./assets/fonts/Joystix.TTF);
+} */
+:root {
+    --yellow: #ffff00;
+    --neonBlue: #1919a6;
+    --blueBonnet: #2121de;
+    --tumbleWeed: #dea185;
+    --red: #fd0000;
+    --electricGreen: #00ff00;
+    --black: #000000;
 }
 
-body{
-    margin:0;
+body {
+    margin: 0;
     padding: 0%;
     background-color: var(--black);
-    color:white;
-    display:flex;
+    color: white;
+    display: flex;
     width: 100vw;
     height: 100vh;
     justify-content: center;
     align-items: center;
 }
 
-a{
+a {
     text-decoration: none;
     color: white;
 }
 
-.header-text{
-    color:var(--yellow);
+.header-text {
+    color: var(--yellow);
     font-size: 2em;
 }
 
-.timer-score{
-    margin:.625rem;
+.timer-score {
+    margin: 0.625rem;
     display: flex;
 }
 
-.counter{
+.counter {
     border: 3px solid var(--blueBonnet);
-    border-radius:3px;
-    padding:.625rem;
-    
+    border-radius: 3px;
+    padding: 0.625rem;
 }
 
-.timer{
-    margin:0 auto 0 0
+.timer {
+    margin: 0 auto 0 0;
 }
 
-.container{
+.container {
     border: 5px solid var(--blueBonnet);
-    border-radius:10px;
-    padding:15px
+    border-radius: 10px;
+    padding: 15px;
 }
-.button-container{
-
+.button-container {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     flex-direction: column;
     margin: 10px 0;
 }
-.button-container .button{
+.button-container .button {
     flex: 1 1 auto;
     margin: 0.625em;
     padding: 0.625em;
 }
-.button{
+.button {
     border: 2px solid var(--blueBonnet);
     border-radius: 5px;
     /* padding: 0.25em; */
     background-color: var(--black);
     color: white;
-    
-    
 }
-.answer-button{
-    font-family: 'Courier New', Courier, monospace;
+.answer-button {
+    font-family: "Courier New", Courier, monospace;
     display: none;
     font-weight: 700;
-}  
+}
 
-.controls{
+.controls {
     display: flex;
     justify-content: space-evenly;
-    margin:0 auto;
+    margin: 0 auto;
 }
-.leader-container{
-    color:var(--tumbleWeed);
+.leader-container {
+    color: var(--tumbleWeed);
     border: 2px solid var(--blueBonnet);
     border-radius: 5px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin:10px
-
+    margin: 10px;
 }
 
-.leaderboard-form{
+.leaderboard-form {
     display: inline-block;
-    color:white;
+    color: white;
     background-color: black;
     border: 2px solid var(--blueBonnet);
     border-radius: 3px;
@@ -118,14 +114,14 @@ a{
 /* sets different colors for places 1,2 and 3 on the leaderboard */
 /* overrides the color of container as they're set after it, using the cascading effect of css */
 
-.leader-spot0{
-    color:#FFD700;
+.leader-spot0 {
+    color: #ffd700;
 }
 
-.leader-spot1{
-    color:#C5CED4;
+.leader-spot1 {
+    color: #c5ced4;
 }
 
-.leader-spot2{
-    color:#CD7F32;
+.leader-spot2 {
+    color: #cd7f32;
 }
